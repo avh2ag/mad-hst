@@ -463,27 +463,29 @@ Site = {
             moreInfoButton.show();
             closeInfoButton.hide();
         });
-        // function l() {
-        //     var e = "is-sent";
-        //     i.addClass(e), console.log("Thank You!")
-        // }
-        // presaleForm.validate({
-        //     rules: {
-        //         email: {
-        //             required: !0,
-        //             email: !0
-        //         },
-        //         fullName: {
-        //             required: !0
-        //         }
-        //     },
-        //     // will need a new submit handler, google sheets?
-        //     submitHandler: function(i) {
-        //         $.post("/form/download", $(i).serialize()).done(function(e) {
-        //             "success" == e.status ? (i.reset(), l()) : window.alert(e.message)
-        //         })
-        //     }
-        // })
+        function l() {
+            var e = "is-sent";
+            i.addClass(e), console.log("Thank You!")
+        }
+        presaleForm.validate({
+            rules: {
+                email: {
+                    required: !0,
+                    email: !0
+                },
+                phone: {
+                    required: !0,
+                    phone: !0
+                }
+            },
+            // will need a new submit handler, google sheets?
+            submitHandler: function(i) {
+                console.log(i);
+                // $.post("/form/download", $(i).serialize()).done(function(e) {
+                //     "success" == e.status ? (i.reset(), l()) : window.alert(e.message)
+                // })
+            }
+        })
     },
     init: function() {
         _self = this, 

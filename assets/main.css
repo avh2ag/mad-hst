@@ -6967,7 +6967,7 @@ button {
     font-family: "microbrew", Helvetica, sans-serif;
     font-size: 20px;
     padding-bottom: 10px; }
-  .presale-info__form__input {
+  .presale-info__form__input, .presale-info__form input[type="text"] {
     background: #3D4D5A;
     border: 2px solid #33D9C2;
     color: #fff;
@@ -6996,3 +6996,13 @@ button {
      }
   .presale-info__form.is-invalid .presale-info__form__input {
     border: 2px solid #de3123; }
+    .presale-info__form__input.error, .presale-info__form input[type="text"].error {
+      border: 2px solid #de3123; }
+  .presale-info__form label.error {
+    color: #de3123;
+    display: block;
+    font: 700 10px 'freight-sans-pro', Arial, sans-serif;
+    margin-top: -5px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
