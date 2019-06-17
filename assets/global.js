@@ -439,36 +439,51 @@ Site = {
     },
     // @avh2ag adding function for presale banner
     foundingMemberInfoForm: function() {
-        var i = $(".js-franchise-banner"),
-            e = i.find(".js-franchise-form"),
-            t = e.find(".js-submit-franchise-form"),
-            a = e.find('[name="email"]'),
-            n = e.find('[name="full-name"]');
-        console.log(i, e, a, n);
+        var foundingMember = $(".js-founding-member"),
+            moreInfoButton = $(".js-show-founding-member-info"),
+            closeInfoButton = $(".js-hide-founding-member-info");
+            presaleForm = $(".js-founding-member-form"),
+            submitPresaleForm = presaleForm.find(".js-submit-founding-member-form"),
+            a = presaleForm.find('[name="email"]');
+            // n = presaleForm.find('[name="full-name"]');
+        console.log(presaleForm);
         var o = "is-invalid",
             s = "is-visible";
-
-        function l() {
-            var e = "is-sent";
-            i.addClass(e), console.log("Thank You!")
-        }
-        e.validate({
-            rules: {
-                email: {
-                    required: !0,
-                    email: !0
-                },
-                fullName: {
-                    required: !0
-                }
-            },
-            // will need a new submit handler, google sheets?
-            submitHandler: function(i) {
-                $.post("/form/download", $(i).serialize()).done(function(e) {
-                    "success" == e.status ? (i.reset(), l()) : window.alert(e.message)
-                })
-            }
-        })
+        moreInfoButton.on("click", function() {
+            presaleForm.show();
+            moreInfoButton.hide();  
+            closeInfoButton.show();
+            $("html, body").animate({
+                scrollTop: closeInfoButton.offset().top
+            }, 1e3)
+            
+        });
+        closeInfoButton.on("click", function() {
+            presaleForm.hide();
+            moreInfoButton.show();
+            closeInfoButton.hide();
+        });
+        // function l() {
+        //     var e = "is-sent";
+        //     i.addClass(e), console.log("Thank You!")
+        // }
+        // presaleForm.validate({
+        //     rules: {
+        //         email: {
+        //             required: !0,
+        //             email: !0
+        //         },
+        //         fullName: {
+        //             required: !0
+        //         }
+        //     },
+        //     // will need a new submit handler, google sheets?
+        //     submitHandler: function(i) {
+        //         $.post("/form/download", $(i).serialize()).done(function(e) {
+        //             "success" == e.status ? (i.reset(), l()) : window.alert(e.message)
+        //         })
+        //     }
+        // })
     },
     init: function() {
         _self = this, 
@@ -477,17 +492,17 @@ Site = {
             _self.home(),
             _self.siteWideBanner(),
             _self.siteWideBannerForm(),
+            _self.foundingMemberInfoForm(),
             $(".js-franchise-banner").length && _self.franchiseBannerForm(),
+                        // @avh2ag override
             $("form").length && _self.forms(), 
             $(".video-player.single").length && _self.video(),
             $("#panel-layout").length && _self.multiple_videos(),
             $(".tabs").length && _self.tabs(),
             $(".blog-panel").length && _self.blog(),
             $("#panel-layout").length && _self.slidingPanels(),
-            $(".js-mobile-only-carousel").length && _self.mobileCarousel(), 
-            Query(".js-jump-to-button").length && _self.jumpto(),
-            // @avh2ag override
-            _self.foundingMemberInfoForm();
+            $(".js-mobile-only-carousel").length && _self.mobileCarousel(); 
+            // Query(".js-jump-to-button").length && _self.jumpto();
     }
 };
 $(function() {

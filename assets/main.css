@@ -6938,7 +6938,7 @@ button {
 .pricing .item--founding-member .founding-member-image {
   float: none;
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   width: 425px;
   min-height: 415px;
   height: 100%;
@@ -6948,9 +6948,11 @@ button {
 }
 .pricing .item--founding-member .presale-info__form {
   float: none;
+  display: none;
   position: relative;
   padding-left: 45px;
-  width: 245px;
+  width: 50%;
+  margin: 0 auto;
   min-height: 415px;
   height: 100%;
   -o-object-fit: cover;
