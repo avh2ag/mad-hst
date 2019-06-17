@@ -3585,6 +3585,7 @@ input[type="checkbox"]:checked + label span {
     margin-bottom: -16px;
     max-width: 282px; }
   .pricing .item--presale {
+    /*  */ 
     padding-left: 310px;
     position: relative;
     min-height: 425px; }
@@ -6933,3 +6934,63 @@ button {
   .franchise-banner__form-container {
     padding-left: 68px; } }
 /*# sourceMappingURL=main.css.map */
+/* @avh2ag pre-sale updates */
+.pricing .item--founding-member .founding-member-image {
+  float: none;
+  position: relative;
+  margin: 0 auto;
+  width: 425px;
+  min-height: 415px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: none; 
+}
+.pricing .item--founding-member .presale-info__form {
+  float: none;
+  position: relative;
+  padding-left: 45px;
+  width: 245px;
+  min-height: 415px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: none; 
+}
+.presale-info__form {
+  text-align: left; }
+  .presale-info__form__label {
+    color: #33D9C2;
+    display: block;
+    font-family: "microbrew", Helvetica, sans-serif;
+    font-size: 20px;
+    padding-bottom: 10px; }
+  .presale-info__form__input {
+    background: #3D4D5A;
+    border: 2px solid #33D9C2;
+    color: #fff;
+    display: block;
+    font-family: "microbrew", Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 32px;
+    margin-bottom: 30px;
+    max-width: 286px;
+    padding: 13px 21px;
+    width: 100%; }
+    .presale-info__form__input::-webkit-input-placeholder {
+      color: #fff;
+      font-family: "microbrew", Helvetica, sans-serif; }
+    .presale-info__form__input:-ms-input-placeholder {
+      color: #fff;
+      font-family: "microbrew", Helvetica, sans-serif; }
+    .presale-info__form__input::-ms-input-placeholder {
+      color: #fff;
+      font-family: "microbrew", Helvetica, sans-serif; }
+    .presale-info__form__input::placeholder {
+      color: #fff;
+      font-family: "microbrew", Helvetica, sans-serif; }
+  .presale-info__form__button {
+    font-size: 26px;
+     }
+  .presale-info__form.is-invalid .presale-info__form__input {
+    border: 2px solid #de3123; }

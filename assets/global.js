@@ -437,6 +437,39 @@ Site = {
             }
         })
     },
+    // @avh2ag adding function for presale banner
+    foundingMemberInfoForm: function() {
+        var i = $(".js-franchise-banner"),
+            e = i.find(".js-franchise-form"),
+            t = e.find(".js-submit-franchise-form"),
+            a = e.find('[name="email"]'),
+            n = e.find('[name="full-name"]');
+        console.log(i, e, a, n);
+        var o = "is-invalid",
+            s = "is-visible";
+
+        function l() {
+            var e = "is-sent";
+            i.addClass(e), console.log("Thank You!")
+        }
+        e.validate({
+            rules: {
+                email: {
+                    required: !0,
+                    email: !0
+                },
+                fullName: {
+                    required: !0
+                }
+            },
+            // will need a new submit handler, google sheets?
+            submitHandler: function(i) {
+                $.post("/form/download", $(i).serialize()).done(function(e) {
+                    "success" == e.status ? (i.reset(), l()) : window.alert(e.message)
+                })
+            }
+        })
+    },
     init: function() {
         _self = this, 
             _self.siteWide(),
