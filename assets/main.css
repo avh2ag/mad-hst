@@ -6935,16 +6935,34 @@ button {
     padding-left: 68px; } }
 /*# sourceMappingURL=main.css.map */
 /* @avh2ag pre-sale updates */
-.pricing .item--founding-member .founding-member-image {
+.pricing .item--founding-member .founding-member-info {
   float: none;
   position: relative;
-  margin: 0;
+  margin: 0 auto;
   width: 425px;
-  min-height: 415px;
+  min-height: 490px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   max-width: none; 
+  background: url("founding_member_pricing.jpeg") no-repeat;
+  background-size: 100%;
+}
+.pricing .item--founding-member .founding-member-info .signup { 
+  position: absolute;
+  left: 400px;
+}
+.pricing .item--founding-member .founding-member-info 
+  .signup.one-month-signup {
+    top: 200px;
+}
+.pricing .item--founding-member .founding-member-info 
+  .signup.two-month-signup {
+    top: 295px;
+}
+.pricing .item--founding-member .founding-member-info 
+  .signup.three-month-signup {
+    top: 390px;
 }
 .pricing .item--founding-member .presale-info__form {
   float: none;

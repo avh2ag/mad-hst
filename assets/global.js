@@ -440,13 +440,12 @@ Site = {
     // @avh2ag adding function for presale banner
     foundingMemberInfoForm: function() {
         var foundingMember = $(".js-founding-member"),
-            moreInfoButton = $(".js-show-founding-member-info"),
+            moreInfoButton = $(".js-show-founding-member-form"),
             closeInfoButton = $(".js-hide-founding-member-info");
             presaleForm = $(".js-founding-member-form"),
             submitPresaleForm = presaleForm.find(".js-submit-founding-member-form"),
             a = presaleForm.find('[name="email"]');
             // n = presaleForm.find('[name="full-name"]');
-        console.log(presaleForm);
         var o = "is-invalid",
             s = "is-visible";
         moreInfoButton.on("click", function() {
@@ -476,6 +475,10 @@ Site = {
                 phone: {
                     required: !0,
                     phone: !0
+                },
+                fullName: {
+                    required: !0,
+                    fullName: !0
                 }
             },
             // will need a new submit handler, google sheets?

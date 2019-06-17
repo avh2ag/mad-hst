@@ -1878,13 +1878,18 @@
             <div id="content-2" class="tab-content pricing" style="display: block;">
               <h2>Pre-Sale</h2>
               <div class="item item--large item--founding-member js-presale-form" style="padding-top:0;">
-                <img class="founding-member-image" src="assets/founding_member_pricing.jpeg" alt="Founding Member Rates">
+                <div class="founding-member-info card">
+                  <a href="#" class="button signup one-month-signup">Sign Up</a>
+                  <a href="#" class="button signup two-month-signup">Sign Up</a>
+                  <a href="#" class="button signup three-month-signup">Sign Up</a>
+                </div>
+                <!-- <img class="founding-member-image" src="assets/founding_member_pricing.jpeg" alt="Founding Member Rates"> -->
                 <div class="bar">
                     <h5>LIMITED TIME ONLY.</h5>
                     <h5>LIMITED TO <strong>FIRST 100 ENROLLEES.</strong></h5>
                   </div>  
                 <div class="card">
-                  <button class="button js-show-founding-member-info js-jump-to-button">Learn More</button>
+                  <button class="button js-show-founding-member-form js-jump-to-button">Learn More</button>
                   <button class="button js-hide-founding-member-info" style="display:none;">Close</button>
                 </div>
                 <form class="presale-info__form js-founding-member-form" novalidate="" style="text-align: left;">
@@ -1892,15 +1897,15 @@
                   <!-- <input type="hidden" name="_token" value="Xeyv9zvLF62LH1AKJeiiXQkX8cPt5yBtjHhjtqb5">
                   <input type="hidden" name="category" value="nutrition_downloads">
                   <input type="hidden" name="download" value="nutrition-2019"> -->
+                  <label class="presale-info__form__label" for="fullName">Name</label>
+                  <input class="presale-info__form__input" type="text" placeholder="First Last" name="fullName" required="">
                   <label class="presale-info__form__label" for="email">Email</label>
                   <input class="presale-info__form__input" type="email" placeholder="example@gmail.com" name="email" required="">
                   <label class="presale-info__form__label" for="phone">Phone</label>
                   <input class="presale-info__form__input" type="text" placeholder="xxx-xxx-xxxx" name="phone" required="">
                   <button class="presale-info__form__button button js-submit-founding-member-form" type="submit" value="foundingmember">Send Me More Info</button>
                 </form>
-                <!-- <p class="title-area title-area--large">Founding Member Rates</p> -->
-              </div>
-                          
+              </div>                 
             </div>
             <!-- End @avh2ag Edits Here -->
             <div id="content-3" class="tab-content etiquette">
