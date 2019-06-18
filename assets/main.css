@@ -31,11 +31,18 @@ table {
 
 @font-face {
   font-family: 'microbrew';
-  src: url("/public/fonts/microbrew-three/microbrew-three.eot");
+  src: url("microbrew-three.eot");
   /* IE9 Compat Modes */
-  src: url("/public/fonts/microbrew-three/microbrew-three.eot?#iefix") format("embedded-opentype"), url("/public/fonts/microbrew-three/microbrew-three.woff") format("woff"), url("/public/fonts/microbrew-three/microbrew-three.ttf") format("truetype"), url("/public/fonts/microbrew-three/microbrew-three.svg#svgFontName") format("svg");
+  src: url("microbrew-three.eot?#iefix") format("embedded-opentype"), url("/public/fonts/microbrew-three/microbrew-three.woff") format("woff"), url("/public/fonts/microbrew-three/microbrew-three.ttf") format("truetype"), url("/public/fonts/microbrew-three/microbrew-three.svg#svgFontName") format("svg");
   /* Legacy iOS */ }
-
+@font-face {font-family: "microbrew";
+  src: url("66756fc4ea8dbf3a6d4866f8ef62cd2b.eot"); /* IE9*/
+  src: url("66756fc4ea8dbf3a6d4866f8ef62cd2b.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("66756fc4ea8dbf3a6d4866f8ef62cd2b.woff2") format("woff2"), /* chrome、firefox */
+  url("66756fc4ea8dbf3a6d4866f8ef62cd2b.woff") format("woff"), /* chrome、firefox */
+  url("66756fc4ea8dbf3a6d4866f8ef62cd2b.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("66756fc4ea8dbf3a6d4866f8ef62cd2b.svg#Microbrew Three W01 Regular") format("svg"); /* iOS 4.1- */
+}
 /* Commonly Used Styles
 ------------------------------*/
 html {
