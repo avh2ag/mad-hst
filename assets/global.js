@@ -440,7 +440,7 @@ Site = {
     // @avh2ag adding function for presale banner
     foundingMemberInfoForm: function() {
         var foundingMember = $(".js-founding-member"),
-            moreInfoButton = $(".js-show-founding-member-form"),
+            moreInfoButton = $(".js-more-info"),
             closeInfoButton = $(".js-hide-founding-member-info");
             presaleForm = $(".js-founding-member-form"),
             submitPresaleForm = presaleForm.find(".js-submit-founding-member-form"),
@@ -449,11 +449,11 @@ Site = {
         var o = "is-invalid",
             s = "is-visible";
         moreInfoButton.on("click", function() {
-            presaleForm.show();
-            moreInfoButton.hide();  
-            closeInfoButton.show();
+            // presaleForm.show();
+            // moreInfoButton.hide();  
+            // closeInfoButton.show();
             $("html, body").animate({
-                scrollTop: closeInfoButton.offset().top
+                scrollTop: presaleForm.offset().top
             }, 1e3)
             
         });

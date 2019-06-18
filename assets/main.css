@@ -184,6 +184,7 @@ a:active {
   color: #232d35;
   display: inline-block;
   text-align: center;
+  cursor: pointer;
   transition: all .2s ease; }
 
 .no-touch .button:hover {
@@ -6953,20 +6954,26 @@ button {
   left: 400px;
 }
 .pricing .item--founding-member .founding-member-info 
-  .signup.one-month-signup {
+  .learn-more {
+    position: absolute;
+    top: -20px;
+    left: 162.5px;
+  }
+
+.pricing .item--founding-member .founding-member-info 
+  .signup.twelve-month-signup {
     top: 200px;
 }
 .pricing .item--founding-member .founding-member-info 
-  .signup.two-month-signup {
+  .signup.three-month-signup {
     top: 295px;
 }
 .pricing .item--founding-member .founding-member-info 
-  .signup.three-month-signup {
+  .signup.one-month-signup {
     top: 390px;
 }
 .pricing .item--founding-member .presale-info__form {
   float: none;
-  display: none;
   position: relative;
   padding-left: 45px;
   width: 50%;
@@ -6978,6 +6985,7 @@ button {
   max-width: none; 
 }
 .presale-info__form {
+  padding-top: 1em;
   text-align: left; }
   .presale-info__form__label {
     color: #33D9C2;
