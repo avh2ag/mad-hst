@@ -2126,8 +2126,8 @@ input[type="checkbox"]:checked + label span {
   color: #fff; }
 
 .pricing h3 {
-  padding: 20px 0 0 0;
-  font: 24px 'league-gothic', Arial, sans-serif;
+  padding: 0 0 0 0;
+  font: 36px 'league-gothic', Arial, sans-serif;
   text-transform: uppercase; }
 
 .pricing .text-highlighted {
@@ -2154,8 +2154,11 @@ input[type="checkbox"]:checked + label span {
 .pricing .bar {
   background: #191f25;
   padding: 20px 10px; }
-  .pricing .bar h5 {
+  .pricing .bar h5, .pricing .bar h4 {
     color: #32DAC4; }
+  .pricing .bar h4  {
+      font: 700 22px 'freight-sans-pro', Arial, sans-serif;
+    }
 
 .pricing .bar--skinny {
   background: transparent;
@@ -6957,6 +6960,9 @@ button {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.pricing .item--founding-member .founding-member-info-mobile {
+  display: none;
+}
 .pricing .item--founding-member .founding-member-info .signup { 
   position: absolute;
   left: 400px;
@@ -7039,10 +7045,35 @@ button {
     padding-bottom: 10px;
     text-transform: uppercase;
   }
+  .pricing .rate-container {
+    border: .5px solid #31dac4;
+  }
+  .pricing h4.rate-month {
+    padding: 1em;text-decoration: underline;text-transform: uppercase;
+  }
+  .pricing .founding-member-price-card {
+    padding:1em;
+    display:flex;
+    text-align: center;
+    margin:0 auto;
+    width: 200px;
+  }
+  .pricing .founding-member-price-card p.prev-price {
+    text-decoration: line-through;
+    font-size:42px;
+    font-family: 'microbrew';
+  }
+  .pricing .founding-member-price-card p.curr-price {
+    margin-left:12px;
+    font-size:60px;
+    font-family: 'microbrew';
+  }
   @media screen and (max-width: 600px) {
     .pricing .item--founding-member .founding-member-info {
-      min-width: 0;
-      height: auto;
+      display: none;
+    }
+    .pricing .item--founding-member .founding-member-info-mobile {
+      display: block;
     }
     .pricing .item--founding-member .presale-info__form {
       width: 90%;
