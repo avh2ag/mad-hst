@@ -457,22 +457,32 @@ Site = {
             
         });
         function postSubmit() {
-            var postSubmitClass = "is-sent";
             presaleForm.hide();
             thankYou.show();
         }
-        submitPresaleForm.on('click', function(e) {
-            e.preventDefault();
-            postSubmit();
-            var url = "https://script.google.com/macros/s/AKfycbx27FbvB-kX8julS8E9iJPg1ZHH-ooOHzF7K-Xwe4ro9e835F43/exec";
-            // console.log(e, presaleForm.serialize());
-            var jqxhr = $.ajax({
-              url: url,
-              method: "GET",
-              dataType: "json",
-              data: presaleForm.serialize()
-            }).success();
-        });
+
+        presaleForm.validate({
+            rules: {
+                email: {
+                    required: !0,
+                    email: !0
+                },
+                fullName: {
+                    required: !0
+                },
+            },
+            submitHandler: function(i) {
+                postSubmit();
+                var url = "https://script.google.com/macros/s/AKfycbx27FbvB-kX8julS8E9iJPg1ZHH-ooOHzF7K-Xwe4ro9e835F43/exec";
+                // console.log(e, presaleForm.serialize());
+                var jqxhr = $.ajax({
+                  url: url,
+                  method: "GET",
+                  dataType: "json",
+                  data: presaleForm.serialize()
+                }).success();
+            }
+        })
     },
     init: function() {
         _self = this, 
