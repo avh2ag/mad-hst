@@ -441,54 +441,37 @@ Site = {
     foundingMemberInfoForm: function() {
         var foundingMember = $(".js-founding-member"),
             moreInfoButton = $(".js-more-info"),
-            closeInfoButton = $(".js-hide-founding-member-info");
             presaleForm = $(".js-founding-member-form"),
+            thankYou = $('.js-thank-you'),
             submitPresaleForm = presaleForm.find(".js-submit-founding-member-form"),
             a = presaleForm.find('[name="email"]');
             // n = presaleForm.find('[name="full-name"]');
         var o = "is-invalid",
             s = "is-visible";
         moreInfoButton.on("click", function() {
-            // presaleForm.show();
-            // moreInfoButton.hide();  
-            // closeInfoButton.show();
+            presaleForm.show();
+            thankYou.hide();
             $("html, body").animate({
                 scrollTop: presaleForm.offset().top
             }, 1e3)
             
         });
-        closeInfoButton.on("click", function() {
+        function postSubmit() {
+            var postSubmitClass = "is-sent";
             presaleForm.hide();
-            moreInfoButton.show();
-            closeInfoButton.hide();
-        });
-        function l() {
-            var e = "is-sent";
-            i.addClass(e), console.log("Thank You!")
+            thankYou.show();
         }
-        presaleForm.validate({
-            rules: {
-                email: {
-                    required: !0,
-                    email: !0
-                },
-                phone: {
-                    required: !0,
-                    phone: !0
-                },
-                fullName: {
-                    required: !0,
-                    fullName: !0
-                }
-            },
-            // will need a new submit handler, google sheets?
-            submitHandler: function(i) {
-                console.log(i);
-                // $.post("/form/download", $(i).serialize()).done(function(e) {
-                //     "success" == e.status ? (i.reset(), l()) : window.alert(e.message)
-                // })
-            }
-        })
+        submitPresaleForm.on('click', function(e) {
+            e.preventDefault();
+            var url = "https://script.google.com/macros/s/AKfycbx27FbvB-kX8julS8E9iJPg1ZHH-ooOHzF7K-Xwe4ro9e835F43/exec";
+            console.log(e, presaleForm.serialize());
+            var jqxhr = $.ajax({
+              url: url,
+              method: "GET",
+              dataType: "json",
+              data: presaleForm.serialize()
+            }).success(postSubmit);
+        });
     },
     init: function() {
         _self = this, 
