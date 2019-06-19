@@ -463,14 +463,15 @@ Site = {
         }
         submitPresaleForm.on('click', function(e) {
             e.preventDefault();
+            postSubmit();
             var url = "https://script.google.com/macros/s/AKfycbx27FbvB-kX8julS8E9iJPg1ZHH-ooOHzF7K-Xwe4ro9e835F43/exec";
-            console.log(e, presaleForm.serialize());
+            // console.log(e, presaleForm.serialize());
             var jqxhr = $.ajax({
               url: url,
               method: "GET",
               dataType: "json",
               data: presaleForm.serialize()
-            }).success(postSubmit);
+            }).success();
         });
     },
     init: function() {
