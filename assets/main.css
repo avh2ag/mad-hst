@@ -6947,14 +6947,15 @@ button {
   float: none;
   position: relative;
   margin: 0 auto;
-  width: 425px;
+  width: 100%;
+  max-width: 425px;
   min-height: 490px;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  max-width: none; 
-  background: url("founding_member_pricing.jpeg") no-repeat;
-  background-size: 100%;
+  background: url("founding_member_pricing.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .pricing .item--founding-member .founding-member-info .signup { 
   position: absolute;
@@ -6962,9 +6963,8 @@ button {
 }
 .pricing .item--founding-member .founding-member-info 
   .learn-more {
-    position: absolute;
-    top: -20px;
-    left: 162.5px;
+    margin: -10px auto;
+    position: relative;
   }
 
 .pricing .item--founding-member .founding-member-info 
@@ -7038,4 +7038,15 @@ button {
     margin-top: -5px;
     padding-bottom: 10px;
     text-transform: uppercase;
+  }
+  @media screen and (max-width: 600px) {
+    .pricing .item--founding-member .founding-member-info {
+      min-width: 0;
+      height: auto;
+    }
+    .pricing .item--founding-member .presale-info__form {
+      width: 90%;
+      padding: 0;
+      padding-top: 1em;
+    }
   }
