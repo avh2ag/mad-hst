@@ -5843,18 +5843,19 @@ button {
   .content-highlight__item-summary p {
     font: 400 16px/26px "freight-sans-pro", Arial, sans-serif; }
   .content-highlight__item-summary ul {
-    list-style: square inside;
+    list-style: square outside;
+    font: 400 20px "freight-sans-pro", Arial, sans-serif;
   }
     .content-highlight__item-summary ul li a {
       font: 400 20px "freight-sans-pro", Arial, sans-serif;
       cursor: pointer;
-      
+      color: #32DAC4;
     }
     .content-highlight__item-summary ul li a:hover {
       text-decoration: underline;
     } 
     .content-highlight__item-summary ul li a:visited {
-      color: white;
+      color: #32DAC4;
     } 
   .content-highlight__item-button {
     margin-top: 40px; }
