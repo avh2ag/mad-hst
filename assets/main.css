@@ -1946,13 +1946,13 @@ ol p {
   font: 46px/46px 'microbrew', Helvetica, sans-serif;
   color: #fff;
   text-align: center;
-  padding: 0 0 40px 0;
+  padding: 25px 0 40px 0;
   z-index: 20;
   position: relative;
   margin: 0; }
 
 .locations-header h2 .sub,
-.locations-header .tabs + a {
+.locations-header .tabs + a, .override-corner-right {
   display: none; }
 
 .locations-header h2 .sub {
@@ -2664,6 +2664,9 @@ input[type="checkbox"]:checked + label span {
 @media (min-width: 768px) {
   /* Commonly Used Styles
 ------------------------------*/
+  .help-links-override {
+    visibility: hidden;
+  }
   h2.splat {
     font-size: 76px; }
   h2.splat:before {
@@ -3480,7 +3483,7 @@ input[type="checkbox"]:checked + label span {
   .tabs a {
     padding: 15px 30px;
     font-size: 24px; }
-  .locations-header .tabs + a {
+  .locations-header .tabs + a, .override-corner-right {
     display: inline-block;
     vertical-align: top;
     font: 500 16px 'league-gothic', Arial, sans-serif;
